@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.mycode.cedric.airconditionnercontrol.MainActivity"
+    android:background="#000000">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/mainLayout"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                android:id="@+id/imageView"
+                android:background="@mipmap/thermo"
+                android:layout_weight="0.43"
+                android:backgroundTint="#2353c4" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView2"
+                    android:layout_gravity="center_vertical"
+                    android:background="@mipmap/sun"
+                    android:backgroundTint="#2353c4"
+                    android:contentDescription="@string/thermo"
+                    android:contextClickable="false"
+                    android:clickable="false" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView3"
+                    android:layout_below="@+id/imageView2"
+                    android:background="@mipmap/power_icon"
+                    android:backgroundTint="#3874c8"
+                    android:layout_alignParentEnd="false"
+                    android:layout_alignParentStart="false"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="16\u00B0C"
+                android:textSize="64sp"
+                android:id="@+id/tempView"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.43"
+                android:autoText="false"
+                android:focusableInTouchMode="false"
+                android:focusable="false"
+                android:enabled="false"
+                android:textColor="#2353c4"
+                android:backgroundTintMode="multiply"
+                android:textIsSelectable="false"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <com.mycode.cedric.airconditionnercontrol.barSlider
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/barslider" />
+    </LinearLayout>
+</RelativeLayout>

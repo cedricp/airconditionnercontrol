@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AirConditionnerControl</string>
+    <string name="thermo">Thermometer image</string>
+</resources>
